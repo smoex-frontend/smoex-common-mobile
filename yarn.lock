@@ -2385,22 +2385,22 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@smoex-business/basic@^0.0.2":
-  version "0.0.2"
-  resolved "https://npm.pkg.github.com/download/@smoex-business/basic/0.0.2/862149c0f00166726bb3a30e076a8c4acedbcf358e8b07b0fed9b6a9dda6943b#6cf8d39e398fc35e30f915345f0303c4fc2bf454"
-  integrity sha512-EWElYZvydVqIMaQq8S1Y4aUGh10AurYz231gyeIwkMfu/VfxI/hlyhicL4SlzwZCu1dMUkdRh2ZrIStWWr8SzQ==
+"@smoex-business/basic@^0.0.3":
+  version "0.0.3"
+  resolved "https://npm.pkg.github.com/download/@smoex-business/basic/0.0.3/1a85ee42fe9f48d196badc2a813a53c6e0611f72d6c0166ba1d918bb89d0678d#e5d193cbd59414aa1dc5f9955234940ee272af7e"
+  integrity sha512-10oZGFAhtZX4LXFekNbVAHlPXoEbAG/ZokrH/wYtkYnZ1FB+BjZAjuBCcaFLwe3ETY3KVLnn6ETfMbn/AXGQFg==
   dependencies:
     axios "^0.19.2"
     basic-kit-js "^0.0.3"
     qs "^6.9.4"
     redux-async-kit "^0.0.16"
 
-"@smoex-business/user@^0.0.1":
-  version "0.0.1"
-  resolved "https://npm.pkg.github.com/download/@smoex-business/user/0.0.1/5dea4105f52ccc713303cb3d8fef2e8ecf82374bbe38796cd57428be4b20dd19#b1926052cac94ed48ea77d8df9084e663f8da09b"
-  integrity sha512-Wt8fOo8g6MQ8fOEgldCwZIFbs0wIXPtRXmZfxiEG+2c9cZC/Nj3YY7ISJcFCW03kurNT6as8wu5sbMMTCwyD6g==
+"@smoex-business/user@^0.0.3":
+  version "0.0.3"
+  resolved "https://npm.pkg.github.com/download/@smoex-business/user/0.0.3/9db0680f8969c02afa861750821bd070d43d14e40e3b8d9fa7caeddee4ccaac4#7399cb6d66add58a0b55a3891c605e3b6887577e"
+  integrity sha512-VsLim0flgUuzSQClw+6LvHs+8nCR4kDVOpTnzI4LQ4XkdWoCNeq8JhRhHwuqpMeuVXsaEv3Yoeo0LSQAjHDJaw==
   dependencies:
-    "@smoex-business/basic" "^0.0.2"
+    "@smoex-business/basic" "^0.0.3"
     "@types/react-redux" "^7.1.9"
     axios "^0.19.0"
     qs "^6.9.1"
@@ -4495,11 +4495,6 @@ brorand@^1.0.1:
   version "1.1.0"
   resolved "https://registry.npm.taobao.org/brorand/download/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
   integrity sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8=
-
-browser-basic-kit@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npm.taobao.org/browser-basic-kit/download/browser-basic-kit-0.0.1.tgz#695c9cea92c66ffc91f76da0a91c4c9f175eda99"
-  integrity sha1-aVyc6pLGb/yR922gqRxMnxde2pk=
 
 browser-process-hrtime@^1.0.0:
   version "1.0.0"

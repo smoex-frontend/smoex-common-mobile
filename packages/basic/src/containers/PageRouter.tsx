@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Switch, Route, useLocation } from 'react-router-dom'
 import { Header } from './Header'
 import { useAsyncCallback } from 'redux-async-kit'
-import { accountAsyncAction, commonSlice } from 'smoex-common-business'
+import { accountAsyncAction, userSlice } from '@smoex-business/user'
 import { Footer } from './Footer'
 import { PageError } from './PageError'
 import { PageLoading } from './PageLoading'
@@ -10,10 +10,10 @@ import { Install } from './Install'
 import { Controller } from './Controller'
 import { useToastError } from 'react-dom-basic-kit'
 import { DEFALUT_PAGE_PROPS, PageContext } from './PageRouterContext'
-import { initInnerHeight, IS_WECHAT_WEBVIEW } from 'browser-basic-kit'
+import { initInnerHeight, IS_WECHAT_WEBVIEW } from 'basic-kit-browser'
 
 function useInitLoading() {
-  const [getInfo, infoState] = commonSlice.useAction(accountAsyncAction.getInfo)
+  const [getInfo, infoState] = userSlice.useAction(accountAsyncAction.getInfo)
   const [loading, setLoading] = React.useState(true)
   const onGetInfo = useAsyncCallback(async () => {
     await getInfo()

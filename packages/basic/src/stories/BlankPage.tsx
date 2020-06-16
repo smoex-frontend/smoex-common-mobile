@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 import { configureStore } from 'redux-async-kit'
 import { AppContainer, Modal } from 'react-dom-basic-kit'
 import { PageRouter } from '../containers/PageRouter'
-import { commonSlice, commonReducer } from 'smoex-common-business'
+import { userSlice, commonReducer } from '@smoex-business/user'
 import { Provider } from 'react-redux'
 // import { homeSlice } from 'common/slices/home'
 import { createLazyComponent } from 'redux-async-kit'
@@ -11,7 +11,7 @@ import { PageLoading } from '../containers/PageLoading'
 
 
 const store = configureStore({
-  injector: commonSlice.injector,
+  injector: userSlice.injector,
   reducers: commonReducer,
 })
 
