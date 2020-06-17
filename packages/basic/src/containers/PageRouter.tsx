@@ -8,7 +8,7 @@ import { PageError } from './PageError'
 import { PageLoading } from './PageLoading'
 import { Install } from './Install'
 import { Controller } from './Controller'
-import { useToastError } from 'react-dom-basic-kit'
+import { useToastError, AppContainer } from 'react-dom-basic-kit'
 import { DEFALUT_PAGE_PROPS, PageContext } from './PageRouterContext'
 import { initInnerHeight, IS_WECHAT_WEBVIEW } from 'basic-kit-browser'
 
@@ -65,22 +65,24 @@ export const PageRouter: React.FC<any> = (props) => {
 
   const { showHeader, showFooter, showInstall } = pageProps
   return (
-    <PageContext.Provider value={pageContext}>
-      {showInstall && <Install />}
-      {showHeader && <Header />}
-      {loading ? (
-        <PageLoading />
-      ) : (
-        <React.Suspense fallback={<PageLoading />}>
-          <Switch>
-            {false ? <PageError code={500} /> : children}
-            <Route render={() => <PageError code={404} />} />
-          </Switch>
-          {showFooter && <Footer />}
-        </React.Suspense>
-      )}
-      {!loading && <Controller />}
-    </PageContext.Provider>
+    <AppContainer>
+      <PageContext.Provider value={pageContext}>
+        {showInstall && <Install />}
+        {showHeader && <Header />}
+        {loading ? (
+          <PageLoading />
+        ) : (
+          <React.Suspense fallback={<PageLoading />}>
+            <Switch>
+              {false ? <PageError code={500} /> : children}
+              <Route render={() => <PageError code={404} />} />
+            </Switch>
+            {showFooter && <Footer />}
+          </React.Suspense>
+        )}
+        {!loading && <Controller />}
+      </PageContext.Provider>
+    </AppContainer>
   )
 }
 export default PageRouter

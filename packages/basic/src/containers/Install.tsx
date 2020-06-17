@@ -11,7 +11,7 @@ export const Install: React.FC<any> = (props) => {
   const onClose = () => {
     setPageProps({ showInstall: false })
     // 重新 render 组件有延迟，这里提前设置 modal 到正确到位置
-    updateOffsetTop(installRef.current)
+    // updateOffsetTop(installRef.current)
   }
   return (
     <div className={cx('install')} ref={installRef}>

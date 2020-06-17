@@ -1,5 +1,7 @@
 src/
-build/static
+build/
+.storybook/
+.env
 .gitattributes
 .gitignore
 .prettierrc
@@ -7,3 +9,5 @@ tsconfig.json
 tslint.json
 yarn.lock
 config.yml
+config.prod.yml
+webpack.config.json
