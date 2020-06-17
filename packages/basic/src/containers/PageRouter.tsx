@@ -65,24 +65,30 @@ export const PageRouter: React.FC<any> = (props) => {
 
   const { showHeader, showFooter, showInstall } = pageProps
   return (
+    <PageContext.Provider value={pageContext}>
+      {showInstall && <Install />}
+      {showHeader && <Header />}
+      {loading ? (
+        <PageLoading />
+      ) : (
+        <React.Suspense fallback={<PageLoading />}>
+          <Switch>
+            {false ? <PageError code={500} /> : children}
+            <Route render={() => <PageError code={404} />} />
+          </Switch>
+          {showFooter && <Footer />}
+        </React.Suspense>
+      )}
+      {!loading && <Controller />}
+    </PageContext.Provider>
+  )
+}
+
+const PageContainer: React.FC = props => {
+  return (
     <AppContainer>
-      <PageContext.Provider value={pageContext}>
-        {showInstall && <Install />}
-        {showHeader && <Header />}
-        {loading ? (
-          <PageLoading />
-        ) : (
-          <React.Suspense fallback={<PageLoading />}>
-            <Switch>
-              {false ? <PageError code={500} /> : children}
-              <Route render={() => <PageError code={404} />} />
-            </Switch>
-            {showFooter && <Footer />}
-          </React.Suspense>
-        )}
-        {!loading && <Controller />}
-      </PageContext.Provider>
+      <PageRouter>{props.children}</PageRouter>
     </AppContainer>
   )
 }
-export default PageRouter
+export default PageContainer
