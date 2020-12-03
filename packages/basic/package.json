@@ -29,9 +29,9 @@
   },
   "homepage": "https://github.com/lynnkoo/smoex-common-mobile#readme",
   "dependencies": {
-    "@basic-kits/dom": "^0.0.4",
-    "@react-kits/dom": "^0.0.4",
-    "@react-kits/redux": "^0.0.4",
+    "@basic-kits/dom": "^0.0.7",
+    "@react-kits/dom": "^0.0.6",
+    "@react-kits/redux": "^0.0.6",
     "@smoex-logic/user": "^0.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

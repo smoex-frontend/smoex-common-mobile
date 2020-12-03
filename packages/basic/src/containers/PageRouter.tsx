@@ -10,7 +10,7 @@ import { Install } from './Install'
 import { Controller } from './Controller'
 import { useToastError, AppContainer } from '@react-kits/dom'
 import { DEFALUT_PAGE_PROPS, PageContext } from './PageRouterContext'
-import { initInnerHeight, BroswerTypes } from '@basic-kits/dom'
+import { initWindowHeight, BroswerTypes } from '@basic-kits/dom'
 
 function useInitLoading() {
   const [getInfo, infoState] = userSlice.useAction(accountAsyncAction.getInfo)
@@ -33,32 +33,21 @@ function useInitLoading() {
   return loading
 }
 
-export function useInitRootHeight() {
-  const { pathname } = useLocation()
-  React.useEffect(() => {
-    const rootNode = document.getElementById('root') as any
-    if (!rootNode.style.minHeight) {
-      // 初始化 min height， 主要目的为兼容 safari 的 innerHeight
-      initInnerHeight(rootNode)
-    } else if (BroswerTypes.isWechatWebview) {
-      // WORKAROUND 兼容 wechat 内置浏览器路由切换时 innerHeight 不一致的问题, 路由延迟大概 100 ms
-      setTimeout(() => {
-        initInnerHeight(rootNode)
-      }, 100)
-    }
-  }, [pathname])
-}
-
 export const PageRouter: React.FC<any> = (props) => {
   const { children } = props
   const [pageProps, setPageProps] = React.useState(DEFALUT_PAGE_PROPS)
   const loading = useInitLoading()
-  useInitRootHeight()
+  const { pathname } = useLocation()
   const [pageContext, setPageContext] = React.useState<any>({
     setPageProps: (pageProps: any) =>
       setPageProps((mProps: any) => ({ ...mProps, ...pageProps })),
     pageProps: DEFALUT_PAGE_PROPS,
   })
+
+  React.useEffect(() => {
+    initWindowHeight('root')
+  }, [pathname])
+  
   React.useEffect(() => {
     setPageContext((mProps: any) => ({ ...mProps, pageProps }))
   }, [pageProps])

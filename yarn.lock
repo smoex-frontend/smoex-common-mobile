@@ -1155,10 +1155,10 @@
   resolved "https://registry.npm.taobao.org/@base2/pretty-print-object/download/@base2/pretty-print-object-1.0.0.tgz#860ce718b0b73f4009e153541faff2cb6b85d047"
   integrity sha1-hgznGLC3P0AJ4VNUH6/yy2uF0Ec=
 
-"@basic-kits/dom@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.npm.taobao.org/@basic-kits/dom/download/@basic-kits/dom-0.0.4.tgz#475f4aabe108ba31834377fa7b0fe92ba73d9c7e"
-  integrity sha1-R19Kq+EIujGDQ3f6ew/pK6c9nH4=
+"@basic-kits/dom@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.npm.taobao.org/@basic-kits/dom/download/@basic-kits/dom-0.0.7.tgz#7c75e6e44a733eaef8aceef858fdea118d39b664"
+  integrity sha1-fHXm5EpzPq74rO74WP3qEY05tmQ=
   dependencies:
     "@basic-kits/ua" "^0.0.4"
 
@@ -2383,6 +2383,18 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
+"@react-kits/base@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.npm.taobao.org/@react-kits/base/download/@react-kits/base-0.0.2.tgz#787e20dc58e6b31ba99507dcffcd8b7a4bd1693d"
+  integrity sha1-eH4g3FjmsxuplQfc/82LekvRaT0=
+  dependencies:
+    "@basic-kits/dom" "^0.0.7"
+    "@basic-kits/js" "^0.0.4"
+    immer "^7.0.1"
+    react "^17.0.1"
+    react-router "^5.1.2"
+    tslib "^2.0.3"
+
 "@react-kits/common@^0.0.4":
   version "0.0.4"
   resolved "https://registry.npm.taobao.org/@react-kits/common/download/@react-kits/common-0.0.4.tgz#04a4ab1d05a98486ca10f15ee036737c320864fb"
@@ -2394,13 +2406,13 @@
     react-router "^5.1.2"
     tslib "^2.0.3"
 
-"@react-kits/dom@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.npm.taobao.org/@react-kits/dom/download/@react-kits/dom-0.0.4.tgz#2568b7269d0ac04434bb3905c01a8512dd21eaf9"
-  integrity sha1-JWi3Jp0KwEQ0uzkFwBqFEt0h6vk=
+"@react-kits/dom@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.npm.taobao.org/@react-kits/dom/download/@react-kits/dom-0.0.6.tgz#90a492f469303d34d76485a84602e332b587238e"
+  integrity sha1-kKSS9GkwPTTXZIWoRgLjMrWHI44=
   dependencies:
-    "@basic-kits/dom" "^0.0.4"
-    "@react-kits/common" "^0.0.4"
+    "@basic-kits/dom" "^0.0.7"
+    "@react-kits/base" "^0.0.2"
     classnames "^2.2.6"
     immer "^5.3.6"
     qs "^6.9.4"
@@ -2417,6 +2429,25 @@
   dependencies:
     "@basic-kits/js" "^0.0.4"
     "@react-kits/common" "^0.0.4"
+    immer "^5.1.0"
+    lodash "^4.17.15"
+    react "^17.0.1"
+    react-redux "^7.1.3"
+    redux "^4.0.5"
+    redux-devtools-extension "^2.13.8"
+    redux-logger "^3.0.6"
+    redux-observable "^1.2.0"
+    reselect "^4.0.0"
+    tslib "^2.0.3"
+
+"@react-kits/redux@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.npm.taobao.org/@react-kits/redux/download/@react-kits/redux-0.0.6.tgz#a29b93c8a106dc29c7b19c3df1c033b10b3d4414"
+  integrity sha1-opuTyKEG3CnHsZw98cAzsQs9RBQ=
+  dependencies:
+    "@basic-kits/dom" "^0.0.7"
+    "@basic-kits/js" "^0.0.4"
+    "@react-kits/base" "^0.0.2"
     immer "^5.1.0"
     lodash "^4.17.15"
     react "^17.0.1"
