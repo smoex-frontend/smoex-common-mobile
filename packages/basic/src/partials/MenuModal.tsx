@@ -56,7 +56,7 @@ export const MenuModal: React.FC<any> = (props) => {
   const modal = useModal(({ uuid }) => <LoginModal uuid={ uuid } />)
 
   return (
-    <DrawerModal uuid={uuid} >
+    <DrawerModal uuid={uuid} rel="Header">
       <div className={cx('menu-modal', { shown })}>
         <AccountIntro showLogin={modal.show} onCloseModal={modal.hide} />
       </div>
