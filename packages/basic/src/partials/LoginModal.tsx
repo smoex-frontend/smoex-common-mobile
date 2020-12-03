@@ -6,8 +6,8 @@ import {
   useToggleToast,
   useFormContext,
   Input,
-} from 'react-dom-basic-kit'
-import { transformStyles } from 'react-dom-basic-kit'
+  transformStyles,
+} from '@react-kits/dom'
 // import { LoginForm } from './LoginForm'
 // import { RegisterForm } from './RegisterForm'
 import { ConfirmModal } from '../components/ConfirmModal'
@@ -53,7 +53,7 @@ export const LoginModal: React.FC<any> = (props) => {
   const onCloseModal = () => {
     props.onClose()
   }
-  const modal = useModal((uuid: any) => (
+  const modal = useModal(({ uuid }) => (
     <ConfirmModal uuid={uuid} onConfirm={() => console.log(46546454)}>{`test`}</ConfirmModal>
   ))
   const toggleToast = useToggleToast()

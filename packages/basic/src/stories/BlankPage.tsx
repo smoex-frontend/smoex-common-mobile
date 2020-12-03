@@ -1,18 +1,16 @@
 import * as React from 'react'
 import { Route } from 'react-router-dom'
-import { configureStore } from 'redux-async-kit'
-import { AppContainer, Modal } from 'react-dom-basic-kit'
+import { configureStore } from '@react-kits/redux'
+import { AppContainer, Modal } from '@react-kits/dom'
 import { PageRouter } from '../containers/PageRouter'
-import { userSlice, commonReducer } from '@smoex-business/user'
+import { userSlice } from '@smoex-logic/user'
 import { Provider } from 'react-redux'
 // import { homeSlice } from 'common/slices/home'
-import { createLazyComponent } from 'redux-async-kit'
 import { PageLoading } from '../containers/PageLoading'
 
 
 const store = configureStore({
   injector: userSlice.injector,
-  reducers: commonReducer,
 })
 
 // window['store'] = store
@@ -21,6 +19,7 @@ const HomePage = () => {
   return (
     <section>
       <PageLoading />
+      <div style={{ height: 3000 }}>For Scroll</div>
     </section>
   )
 }

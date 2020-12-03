@@ -4,8 +4,8 @@ import {
   enhancePopupComponent,
   useModalClose,
   useModalStatus,
-} from 'react-dom-basic-kit'
-import { transformStyles } from 'react-dom-basic-kit'
+  transformStyles,
+} from '@react-kits/dom'
 import { PageLoading } from '../containers/PageLoading'
 import { Loading } from './Loading'
 

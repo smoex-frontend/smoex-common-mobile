@@ -1155,6 +1155,25 @@
   resolved "https://registry.npm.taobao.org/@base2/pretty-print-object/download/@base2/pretty-print-object-1.0.0.tgz#860ce718b0b73f4009e153541faff2cb6b85d047"
   integrity sha1-hgznGLC3P0AJ4VNUH6/yy2uF0Ec=
 
+"@basic-kits/dom@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npm.taobao.org/@basic-kits/dom/download/@basic-kits/dom-0.0.4.tgz#475f4aabe108ba31834377fa7b0fe92ba73d9c7e"
+  integrity sha1-R19Kq+EIujGDQ3f6ew/pK6c9nH4=
+  dependencies:
+    "@basic-kits/ua" "^0.0.4"
+
+"@basic-kits/js@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npm.taobao.org/@basic-kits/js/download/@basic-kits/js-0.0.4.tgz#0ab6829025ce1278cda45c151d1fd3dda06ea74b"
+  integrity sha1-CraCkCXOEnjNpFwVHR/T3aBup0s=
+
+"@basic-kits/ua@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npm.taobao.org/@basic-kits/ua/download/@basic-kits/ua-0.0.4.tgz#07cda8249163ac845378f84a52553f261751f347"
+  integrity sha1-B82oJJFjrIRTePhKUlU/JhdR80c=
+  dependencies:
+    "@basic-kits/js" "^0.0.4"
+
 "@bcoe/v8-coverage@^0.2.3":
   version "0.2.3"
   resolved "https://registry.npm.taobao.org/@bcoe/v8-coverage/download/@bcoe/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
@@ -2364,6 +2383,51 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
+"@react-kits/common@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npm.taobao.org/@react-kits/common/download/@react-kits/common-0.0.4.tgz#04a4ab1d05a98486ca10f15ee036737c320864fb"
+  integrity sha1-BKSrHQWphIbKEPFe4DZzfDIIZPs=
+  dependencies:
+    "@basic-kits/js" "^0.0.4"
+    immer "^7.0.1"
+    react "^17.0.1"
+    react-router "^5.1.2"
+    tslib "^2.0.3"
+
+"@react-kits/dom@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npm.taobao.org/@react-kits/dom/download/@react-kits/dom-0.0.4.tgz#2568b7269d0ac04434bb3905c01a8512dd21eaf9"
+  integrity sha1-JWi3Jp0KwEQ0uzkFwBqFEt0h6vk=
+  dependencies:
+    "@basic-kits/dom" "^0.0.4"
+    "@react-kits/common" "^0.0.4"
+    classnames "^2.2.6"
+    immer "^5.3.6"
+    qs "^6.9.4"
+    react "^17.0.1"
+    react-dom "^17.0.1"
+    react-router-dom "^5.1.2"
+    tslib "^2.0.3"
+    uuid "^3.3.3"
+
+"@react-kits/redux@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npm.taobao.org/@react-kits/redux/download/@react-kits/redux-0.0.4.tgz#2e036baccd44d952aa958bf8474a092c6f8b3a4d"
+  integrity sha1-LgNrrM1E2VKqlYv4R0oJLG+LOk0=
+  dependencies:
+    "@basic-kits/js" "^0.0.4"
+    "@react-kits/common" "^0.0.4"
+    immer "^5.1.0"
+    lodash "^4.17.15"
+    react "^17.0.1"
+    react-redux "^7.1.3"
+    redux "^4.0.5"
+    redux-devtools-extension "^2.13.8"
+    redux-logger "^3.0.6"
+    redux-observable "^1.2.0"
+    reselect "^4.0.0"
+    tslib "^2.0.3"
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npm.taobao.org/@samverschueren/stream-to-observable/download/@samverschueren/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
@@ -2385,27 +2449,26 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@smoex-business/basic@^0.0.4":
-  version "0.0.4"
-  resolved "https://npm.pkg.github.com/download/@smoex-business/basic/0.0.4/aeb1103b2f3081cb1a039952a40f79594ab3ff4a8c7afff6ccce04e545a7ee98#562b63386a7fd72c2b0d37b0c79c8b6519f85ac6"
-  integrity sha512-KJj32Ym7UOG/vjmptmBF/MuLWJ4cAkYV1GK9YAE5elcDmaGmijMrwfynx89lfzBcg0W4kOsoGekuvbHKKIlGUg==
+"@smoex-logic/basic@^0.0.2":
+  version "0.0.2"
+  resolved "https://npm.pkg.github.com/download/@smoex-logic/basic/0.0.2/0096558d6bd6394fdd80d5b3ac9da6b9ec4cf77a5507fc3dbd686e494ca74be4#674924c7adc460ae54c4b4acde7807aebceacb8e"
+  integrity sha512-grZOu2RL137Cvuf7IFEw5Y7pGnnQsjM2Hg004YxJxcksrwFbbDxQKHW9NhnM1GC1B6aseSuol8XFH8rS1rb1vA==
   dependencies:
+    "@react-kits/redux" "^0.0.4"
     axios "^0.19.2"
-    basic-kit-js "^0.0.3"
     qs "^6.9.4"
-    redux-async-kit "^0.0.16"
+    react "^17.0.1"
+    react-dom "^17.0.1"
 
-"@smoex-business/user@^0.0.4":
-  version "0.0.4"
-  resolved "https://npm.pkg.github.com/download/@smoex-business/user/0.0.4/6c22d78177f02f8a5a3936e1a751e35f22c20d4ed8305fe66fd939d821196f30#d6df5094771ae6a37fe9cbfd9f80d28d649c5bf3"
-  integrity sha512-J4eTdISzApUmyl/IyKheIfmRHE38inmHXjfmm5KyvnMwc9psUV5yLm5gEFo7oEpgEevokf2C9gKLOxHwV2h4tw==
+"@smoex-logic/user@^0.0.2":
+  version "0.0.2"
+  resolved "https://npm.pkg.github.com/download/@smoex-logic/user/0.0.2/bf8a6443b1d00f20f03c7c99b0909244967e4e3eaa55b9dddcdf1cf1638ab908#9a96917832e90e76518fc714513cf244d34fe83d"
+  integrity sha512-muGr9gnC6UTGVjltOsBGnMliwbBxpKBv7jkK9gUmJbnxmKVzeLFlwlU/J3cY9ke5qSL1CIjF76AZHwigLTHAnQ==
   dependencies:
-    "@smoex-business/basic" "^0.0.4"
-    "@types/react-redux" "^7.1.9"
-    axios "^0.19.0"
-    qs "^6.9.1"
-    react "^16.11.0"
-    redux-async-kit "^0.0.16"
+    "@react-kits/redux" "^0.0.4"
+    "@smoex-logic/basic" "^0.0.2"
+    react "^17.0.1"
+    react-dom "^17.0.1"
 
 "@storybook/addon-info@^5.2.8":
   version "5.3.19"
@@ -3112,7 +3175,7 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react-redux@^7.1.5", "@types/react-redux@^7.1.9":
+"@types/react-redux@^7.1.5":
   version "7.1.9"
   resolved "https://registry.npm.taobao.org/@types/react-redux/download/@types/react-redux-7.1.9.tgz#280c13565c9f13ceb727ec21e767abe0e9b4aec3"
   integrity sha1-KAwTVlyfE863J+wh52er4Om0rsM=
@@ -3928,7 +3991,7 @@ aws4@^1.8.0:
   resolved "https://registry.npm.taobao.org/aws4/download/aws4-1.10.0.tgz#a17b3a8ea811060e74d47d306122400ad4497ae2"
   integrity sha1-oXs6jqgRBg501H0wYSJACtRJeuI=
 
-axios@^0.19.0, axios@^0.19.2:
+axios@^0.19.2:
   version "0.19.2"
   resolved "https://registry.npm.taobao.org/axios/download/axios-0.19.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
   integrity sha1-PqNsXYgY0NX4qKl6bTa4bNwAyyc=
@@ -4317,30 +4380,6 @@ base@^0.11.1:
     isobject "^3.0.1"
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
-
-basic-kit-browser@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npm.taobao.org/basic-kit-browser/download/basic-kit-browser-0.0.1.tgz#33a46e254b536436122dad9ca958d274e7f4275f"
-  integrity sha1-M6RuJUtTZDYSLa2cqVjSdOf0J18=
-  dependencies:
-    basic-kit-js "^0.0.1"
-
-basic-kit-browser@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.npm.taobao.org/basic-kit-browser/download/basic-kit-browser-0.0.2.tgz#3673593e5a19541d4f9f2991cb35726d551a1b8a"
-  integrity sha1-NnNZPloZVB1PnymRyzVybVUaG4o=
-  dependencies:
-    basic-kit-js "^0.0.3"
-
-basic-kit-js@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npm.taobao.org/basic-kit-js/download/basic-kit-js-0.0.1.tgz#fbb631222baa73a69b383dd464a6e02835181e98"
-  integrity sha1-+7YxIiuqc6abOD3UZKbgKDUYHpg=
-
-basic-kit-js@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.npm.taobao.org/basic-kit-js/download/basic-kit-js-0.0.3.tgz#9e867e3f19474dfb7c4d1fb622550949863ee4e9"
-  integrity sha1-noZ+PxlHTft8TR+2IlUJSYY+5Ok=
 
 batch-processor@1.0.0:
   version "1.0.0"
@@ -11886,7 +11925,7 @@ qs@6.7.0:
   resolved "https://registry.npm.taobao.org/qs/download/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha1-QdwaAV49WB8WIXdr4xr7KHapsbw=
 
-qs@^6.4.0, qs@^6.6.0, qs@^6.9.1, qs@^6.9.4:
+qs@^6.4.0, qs@^6.6.0, qs@^6.9.4:
   version "6.9.4"
   resolved "https://registry.npm.taobao.org/qs/download/qs-6.9.4.tgz#9090b290d1f91728d3c22e54843ca44aea5ab687"
   integrity sha1-kJCykNH5FyjTwi5UhDykSupatoc=
@@ -12087,22 +12126,7 @@ react-docgen@^5.0.0:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
-react-dom-basic-kit@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.npm.taobao.org/react-dom-basic-kit/download/react-dom-basic-kit-0.1.4.tgz?cache=0&sync_timestamp=1592362257174&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-dom-basic-kit%2Fdownload%2Freact-dom-basic-kit-0.1.4.tgz#746c8527f5a62c2acc7c199e15bf76e9f9e63680"
-  integrity sha1-dGyFJ/WmLCrMfBmeFb926fnmNoA=
-  dependencies:
-    basic-kit-browser "^0.0.1"
-    classnames "^2.2.6"
-    immer "^5.3.6"
-    qs "^6.9.4"
-    react "^16.11.0"
-    react-dom "^16.11.0"
-    react-logic-utils "^0.0.3"
-    react-router-dom "^5.1.2"
-    uuid "^3.3.3"
-
-react-dom@^16.11.0, react-dom@^16.8.3:
+react-dom@^16.8.3:
   version "16.13.1"
   resolved "https://registry.npm.taobao.org/react-dom/download/react-dom-16.13.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-dom%2Fdownload%2Freact-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
   integrity sha1-wb03MxoEhsB47lTEdAcgmTsuDn8=
@@ -12111,6 +12135,15 @@ react-dom@^16.11.0, react-dom@^16.8.3:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.19.1"
+
+react-dom@^17.0.1:
+  version "17.0.1"
+  resolved "https://registry.npm.taobao.org/react-dom/download/react-dom-17.0.1.tgz?cache=0&sync_timestamp=1603367819281&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-dom%2Fdownload%2Freact-dom-17.0.1.tgz#1de2560474ec9f0e334285662ede52dbc5426fc6"
+  integrity sha1-HeJWBHTsnw4zQoVmLt5S28VCb8Y=
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    scheduler "^0.20.1"
 
 react-draggable@^4.0.3:
   version "4.4.3"
@@ -12178,15 +12211,6 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
 
-react-logic-utils@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.npm.taobao.org/react-logic-utils/download/react-logic-utils-0.0.3.tgz#94c2c67633a873f3850af655d90c72dbdccbb23d"
-  integrity sha1-lMLGdjOoc/OFCvZV2Qxy29zLsj0=
-  dependencies:
-    basic-kit-js "^0.0.1"
-    immer "^7.0.1"
-    react "^16.13.1"
-
 react-popper-tooltip@^2.8.3:
   version "2.11.1"
   resolved "https://registry.npm.taobao.org/react-popper-tooltip/download/react-popper-tooltip-2.11.1.tgz#3c4bdfd8bc10d1c2b9a162e859bab8958f5b2644"
@@ -12232,7 +12256,7 @@ react-router-dom@^5.1.2:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-router@5.2.0:
+react-router@5.2.0, react-router@^5.1.2:
   version "5.2.0"
   resolved "https://registry.npm.taobao.org/react-router/download/react-router-5.2.0.tgz#424e75641ca8747fbf76e5ecca69781aa37ea293"
   integrity sha1-Qk51ZByodH+/duXsyml4GqN+opM=
@@ -12277,7 +12301,7 @@ react-textarea-autosize@^7.1.0:
     "@babel/runtime" "^7.1.2"
     prop-types "^15.6.0"
 
-react@^16.11.0, react@^16.13.1, react@^16.8.3:
+react@^16.8.3:
   version "16.13.1"
   resolved "https://registry.npm.taobao.org/react/download/react-16.13.1.tgz?cache=0&sync_timestamp=1589682472748&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact%2Fdownload%2Freact-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha1-LoGIIvGpdDEiwGPWQQ2FweOv5I4=
@@ -12285,6 +12309,14 @@ react@^16.11.0, react@^16.13.1, react@^16.8.3:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
+
+react@^17.0.1:
+  version "17.0.1"
+  resolved "https://registry.npm.taobao.org/react/download/react-17.0.1.tgz?cache=0&sync_timestamp=1603367818828&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact%2Fdownload%2Freact-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
+  integrity sha1-bgYAQWvVdXTj+G2S7bo9kAhyYSc=
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
 
 read-cmd-shim@^1.0.1:
   version "1.0.5"
@@ -12479,23 +12511,6 @@ redent@^3.0.0:
   dependencies:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
-
-redux-async-kit@^0.0.16:
-  version "0.0.16"
-  resolved "https://registry.npm.taobao.org/redux-async-kit/download/redux-async-kit-0.0.16.tgz#664eb18fe2309b7e3aa718699046438aefde7162"
-  integrity sha1-Zk6xj+Iwm346pxhpkEZDiu/ecWI=
-  dependencies:
-    basic-kit-js "^0.0.1"
-    immer "^5.1.0"
-    lodash "^4.17.15"
-    react "^16.11.0"
-    react-logic-utils "^0.0.3"
-    react-redux "^7.1.3"
-    redux "^4.0.5"
-    redux-devtools-extension "^2.13.8"
-    redux-logger "^3.0.6"
-    redux-observable "^1.2.0"
-    reselect "^4.0.0"
 
 redux-devtools-extension@^2.13.8:
   version "2.13.8"
@@ -12926,6 +12941,14 @@ scheduler@^0.19.1:
   version "0.19.1"
   resolved "https://registry.npm.taobao.org/scheduler/download/scheduler-0.19.1.tgz?cache=0&sync_timestamp=1588782643536&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fscheduler%2Fdownload%2Fscheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
   integrity sha1-Tz4u0sGn1laB9MhU+oxaHMtA8ZY=
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+
+scheduler@^0.20.1:
+  version "0.20.1"
+  resolved "https://registry.npm.taobao.org/scheduler/download/scheduler-0.20.1.tgz?cache=0&sync_timestamp=1603367820566&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fscheduler%2Fdownload%2Fscheduler-0.20.1.tgz#da0b907e24026b01181ecbc75efdc7f27b5a000c"
+  integrity sha1-2guQfiQCawEYHsvHXv3H8ntaAAw=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -14274,6 +14297,11 @@ tslib@^1.10.0, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
   version "1.13.0"
   resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
   integrity sha1-yIHhPMcBWJTtkUhi0nZDb6mkcEM=
+
+tslib@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npm.taobao.org/tslib/download/tslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
+  integrity sha1-jgdBrEX8DCJuWKF7/D5kubxsphw=
 
 tslint-react@^3.6.0:
   version "3.6.0"

@@ -5,11 +5,11 @@ import {
   useToggleToast,
   useToastError,
   useModal,
-} from 'react-dom-basic-kit'
-import { transformStyles, useFormContext } from 'react-dom-basic-kit'
-import { enhanceFormComponent } from 'react-dom-basic-kit'
-import { useAsyncCallback, useCurrentCallback } from 'redux-async-kit'
-import { accountAsyncAction, userSlice, accountSelector } from '@smoex-business/user'
+  transformStyles, useFormContext,
+  enhanceFormComponent,
+} from '@react-kits/dom'
+import { useAsyncCallback } from '@react-kits/redux'
+import { accountAsyncAction, userSlice, accountSelector } from '@smoex-logic/user'
 import { LoginFormInput } from './LoginModal'
 import { ConfirmModal } from '../components/ConfirmModal'
 
@@ -21,7 +21,7 @@ const TRegisterForm: React.FC<any> = (props) => {
 
   const toggleToast = useToggleToast()
 
-  const modal = useModal(uuid => (
+  const modal = useModal(({ uuid }) => (
     <ConfirmModal uuid={uuid}>
       Register success <br />
       Please complate your information.
@@ -38,19 +38,19 @@ const TRegisterForm: React.FC<any> = (props) => {
     accountSelector.info
   )
 
-  const onRegistered = useCurrentCallback(() => {
-    if (account.group === 'member') {
-      toggleToast('already register so to login')
-      callback()
-    } else {
-      modal.show()
-    }
-  }, [account])
+  // const onRegistered = useCurrentCallback(() => {
+  //   if (account.group === 'member') {
+  //     toggleToast('already register so to login')
+  //     callback()
+  //   } else {
+  //     modal.show()
+  //   }
+  // }, [account])
 
   const onRegister = useAsyncCallback(async () => {
     const { code } = data
     await verify(code, 'register')
-    onRegistered.current()
+    // onRegistered.current()
   }, [data, verify, account]) as any
 
   const onSendCode = useAsyncCallback(async () => {

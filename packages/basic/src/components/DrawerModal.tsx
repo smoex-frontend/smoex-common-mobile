@@ -1,11 +1,6 @@
 import * as React from 'react'
 import styles from './styles/Modal.module.scss'
-import { usePopupShown, IPopupProps, useModalClose, useModalStatus } from 'react-dom-basic-kit'
-
-import { enhancePopupComponent } from 'react-dom-basic-kit'
-
-import { transformStyles } from 'react-dom-basic-kit'
-import { cloneModalContent } from 'react-dom-basic-kit'
+import { usePopupShown, IPopupProps, useModalClose, useModalStatus, enhancePopupComponent, transformStyles, cloneModalContent } from '@react-kits/dom'
 
 const cx = transformStyles(styles)
 

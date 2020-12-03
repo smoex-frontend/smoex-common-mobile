@@ -1,12 +1,12 @@
 import * as React from 'react'
-import { IS_QQ_WEBVIEW } from 'basic-kit-browser'
+import { BroswerTypes } from '@basic-kits/dom'
 import styles from './styles/App.module.scss'
-import { transformStyles } from 'react-dom-basic-kit'
+import { transformStyles } from '@react-kits/dom'
 
 const cx = transformStyles(styles)
 
 export const Controller = () => {
-  if (!IS_QQ_WEBVIEW) {
+  if (!BroswerTypes.isQQWebView) {
     return null
   }
 

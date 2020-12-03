@@ -1,16 +1,16 @@
 import * as React from 'react'
 import { Switch, Route, useLocation } from 'react-router-dom'
 import { Header } from './Header'
-import { useAsyncCallback } from 'redux-async-kit'
-import { accountAsyncAction, userSlice } from '@smoex-business/user'
+import { useAsyncCallback } from '@react-kits/redux'
+import { accountAsyncAction, userSlice } from '@smoex-logic/user'
 import { Footer } from './Footer'
 import { PageError } from './PageError'
 import { PageLoading } from './PageLoading'
 import { Install } from './Install'
 import { Controller } from './Controller'
-import { useToastError, AppContainer } from 'react-dom-basic-kit'
+import { useToastError, AppContainer } from '@react-kits/dom'
 import { DEFALUT_PAGE_PROPS, PageContext } from './PageRouterContext'
-import { initInnerHeight, IS_WECHAT_WEBVIEW } from 'basic-kit-browser'
+import { initInnerHeight, BroswerTypes } from '@basic-kits/dom'
 
 function useInitLoading() {
   const [getInfo, infoState] = userSlice.useAction(accountAsyncAction.getInfo)
@@ -40,7 +40,7 @@ export function useInitRootHeight() {
     if (!rootNode.style.minHeight) {
       // 初始化 min height， 主要目的为兼容 safari 的 innerHeight
       initInnerHeight(rootNode)
-    } else if (IS_WECHAT_WEBVIEW) {
+    } else if (BroswerTypes.isWechatWebview) {
       // WORKAROUND 兼容 wechat 内置浏览器路由切换时 innerHeight 不一致的问题, 路由延迟大概 100 ms
       setTimeout(() => {
         initInnerHeight(rootNode)

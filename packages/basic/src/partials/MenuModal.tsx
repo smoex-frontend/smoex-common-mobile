@@ -1,13 +1,10 @@
 import * as React from 'react'
 import styles from './styles/MenuModal.module.scss'
 import { DrawerModal } from '../components/DrawerModal'
-import { usePopupShown, useModalStatus } from 'react-dom-basic-kit'
-import { transformStyles } from 'react-dom-basic-kit'
+import { usePopupShown, useModalStatus, transformStyles, useModal } from '@react-kits/dom'
 import { LoginModal } from './LoginModal'
 
-import { useModal } from 'react-dom-basic-kit'
-import { userSlice, accountAsyncAction, accountSelector } from '@smoex-business/user'
-import { Link, NavLink } from 'react-router-dom'
+import { userSlice, accountAsyncAction, accountSelector } from '@smoex-logic/user'
 
 const cx = transformStyles(styles)
 
@@ -56,7 +53,8 @@ const AccountIntro = (props: any) => {
 export const MenuModal: React.FC<any> = (props) => {
   const { uuid } = props
   const { shown } = useModalStatus(uuid)
-  const modal = useModal(id => <LoginModal uuid={id} />)
+  const modal = useModal(({ uuid }) => <LoginModal uuid={ uuid } />)
+
   return (
     <DrawerModal uuid={uuid} >
       <div className={cx('menu-modal', { shown })}>

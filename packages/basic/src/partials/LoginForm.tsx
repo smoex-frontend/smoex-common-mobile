@@ -1,11 +1,8 @@
 import * as React from 'react'
-import { FullScreenModal } from '../components/FullScreenModal'
 import styles from './styles/LoginModal.module.scss'
-import { useToastError, useFormContext } from 'react-dom-basic-kit'
-import { transformStyles } from 'react-dom-basic-kit'
-import { enhanceFormComponent } from 'react-dom-basic-kit'
-import { useAsyncCallback } from 'redux-async-kit'
-import { accountAsyncAction, userSlice } from '@smoex-business/user'
+import { useToastError, useFormContext, transformStyles, enhanceFormComponent } from '@react-kits/dom'
+import { useAsyncCallback } from '@react-kits/redux'
+import { accountAsyncAction, userSlice } from '@smoex-logic/user'
 import { LoginFormInput } from '././LoginModal'
 
 const cx = transformStyles(styles)

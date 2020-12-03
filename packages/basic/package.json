@@ -1,13 +1,14 @@
 {
   "name": "@smoex-mobile/basic",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simplify work flow for redux",
   "main": "lib/index.js",
   "scripts": {
     "start": "start-storybook -p 6007",
     "build": " webpack",
     "build:prod": "npm run build && npm publish",
-    "upload:prod": "smoex-scripts upload ./build",
+    "upload": "smoex-scripts upload ./build",
+    "package": "npm run build && npm run upload && npm publish",
     "format": "npm run format:tslint && npm run format:prettier",
     "format:tslint": "tslint --fix --config ./tslint.json 'src/**/*.{ts,tsx}'",
     "format:prettier": "prettier --config .prettierrc --write 'src/**/*.{js,jsx,ts,tsx,scss}'"
@@ -28,22 +29,22 @@
   },
   "homepage": "https://github.com/lynnkoo/smoex-common-mobile#readme",
   "dependencies": {
-    "@smoex-business/user": "^0.0.4",
-    "basic-kit-browser": "^0.0.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-dom-basic-kit": "^0.1.4",
+    "@basic-kits/dom": "^0.0.4",
+    "@react-kits/dom": "^0.0.4",
+    "@react-kits/redux": "^0.0.4",
+    "@smoex-logic/user": "^0.0.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-redux": "^7.1.3",
-    "react-router-dom": "^5.1.2",
-    "redux-async-kit": "^0.0.16"
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@storybook/addon-info": "^5.2.8",
     "@storybook/react": "^5.2.8",
     "@svgr/webpack": "^5.0.1",
-    "@types/react-router-dom": "^5.1.3",
     "@types/react-redux": "^7.1.5",
+    "@types/react-router-dom": "^5.1.3",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.1.0",
