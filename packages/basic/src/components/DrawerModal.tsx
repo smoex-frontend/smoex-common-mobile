@@ -43,6 +43,7 @@ const TDrawerModal: React.FC<IDrawerModalProps> = (props) => {
 
   React.useLayoutEffect(() => {    
     const top = getOffsetTop(rel)
+    // safari 在滚动时, 由于地址栏收缩可能无法第一时间获取到正确到位置
     if (top >= 0) {
       setOffetTop(top)
       return
