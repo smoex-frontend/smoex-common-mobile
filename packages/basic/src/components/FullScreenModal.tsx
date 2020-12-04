@@ -5,31 +5,11 @@ import {
   useModalClose,
   useModalStatus,
   transformStyles,
+  usePopupOverlayClose,
 } from '@react-kits/dom'
-import { PageLoading } from '../containers/PageLoading'
 import { Loading } from './Loading'
 
 const cx = transformStyles(styles)
-
-export function usePopupOverlayClose(shown: boolean, onClose: () => void) {
-  const [overlay, setOverlay] = React.useState(true)
-  React.useEffect(() => {
-    const popupLayerNode = document.getElementById('PopupLayer')
-    if (popupLayerNode) {
-      if (overlay) {
-        popupLayerNode.style.zIndex = '2'
-      } else {
-        popupLayerNode.style.zIndex = ''
-      }
-    }
-  }, [overlay])
-  return React.useCallback(() => {
-    if (!shown && onClose) {
-      setOverlay(false)
-      setTimeout(onClose)
-    }
-  }, [shown])
-}
 
 const TFullScreenModal: React.FC<any> = (props: any) => {
   const { uuid, children } = props

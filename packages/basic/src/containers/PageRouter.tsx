@@ -8,7 +8,7 @@ import { PageError } from './PageError'
 import { PageLoading } from './PageLoading'
 import { Install } from './Install'
 import { Controller } from './Controller'
-import { useToastError, AppContainer } from '@react-kits/dom'
+import { useToastError, AppContainer, useModalCloseAll } from '@react-kits/dom'
 import { DEFALUT_PAGE_PROPS, PageContext } from './PageRouterContext'
 import { initWindowHeight, BroswerTypes } from '@basic-kits/dom'
 
@@ -36,6 +36,7 @@ function useInitLoading() {
 export const PageRouter: React.FC<any> = (props) => {
   const { children } = props
   const [pageProps, setPageProps] = React.useState(DEFALUT_PAGE_PROPS)
+  const closeAllModal = useModalCloseAll(500)
   const loading = useInitLoading()
   const { pathname } = useLocation()
   const [pageContext, setPageContext] = React.useState<any>({
@@ -44,9 +45,12 @@ export const PageRouter: React.FC<any> = (props) => {
     pageProps: DEFALUT_PAGE_PROPS,
   })
 
+
   React.useEffect(() => {
     initWindowHeight('root')
+    closeAllModal()
   }, [pathname])
+  console.log(pathname)
   
   React.useEffect(() => {
     setPageContext((mProps: any) => ({ ...mProps, pageProps }))
@@ -73,7 +77,7 @@ export const PageRouter: React.FC<any> = (props) => {
   )
 }
 
-const PageContainer: React.FC = props => {
+export const PageContainer: React.FC = props => {
   return (
     <AppContainer>
       <PageRouter>{props.children}</PageRouter>

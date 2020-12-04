@@ -1,8 +1,6 @@
 import * as React from 'react'
 import styles from './styles/Modal.module.scss'
-import { DrawerModal } from '../components/DrawerModal'
 import {
-  usePopupShown,
   transformStyles,
   Modal,
   useModalStatus,

@@ -1,12 +1,11 @@
 import * as React from 'react'
-import { Route } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
 import { configureStore } from '@react-kits/redux'
-import { AppContainer, Modal } from '@react-kits/dom'
-import { PageRouter } from '../containers/PageRouter'
+import { useModal } from '@react-kits/dom'
 import { userSlice } from '@smoex-logic/user'
 import { Provider } from 'react-redux'
-// import { homeSlice } from 'common/slices/home'
-import { PageLoading } from '../containers/PageLoading'
+import ConfirmModal from '../components/ConfirmModal'
+import PageContainer from '../containers/PageRouter'
 
 
 const store = configureStore({
@@ -16,9 +15,11 @@ const store = configureStore({
 // window['store'] = store
 
 const HomePage = () => {
+  const modal = useModal(ConfirmModal)
   return (
     <section>
-      <PageLoading />
+      <div onClick={modal.show}>show confirm</div>
+      <Link to="/notfound">to notfound</Link>
       <div style={{ height: 3000 }}>For Scroll</div>
     </section>
   )
@@ -57,11 +58,9 @@ export const ToggleModal: any = (p: any) => {
 export const BlankPage: React.FC = () => {
   return (
     <Provider store={store}>
-      <AppContainer>
-        <PageRouter>
-          <Route path="/" component={HomePage} />
-        </PageRouter>
-      </AppContainer>
+      <PageContainer>
+        <Route path="/" component={HomePage} />
+      </PageContainer>
     </Provider>
   )
 }

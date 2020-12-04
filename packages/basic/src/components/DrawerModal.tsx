@@ -26,15 +26,6 @@ export function getOffsetTop(nodeId: string) {
   return 0
 }
 
-// 如果使用 setTimeout 延时处理，则会有比较明显的卡顿, 这里需要提前计算出移动之后的位置
-// export function updateOffsetTop(node: HTMLElement) {
-//   const modals: any = document.getElementsByClassName(cx('dropdown-modal'))
-//   const { height = 0 } = node.getBoundingClientRect()
-//   for (const modal of modals) {
-//     ;(modal as HTMLElement).style.top = `${getOffsetTop() - height}px`
-//   }
-// }
-
 const TDrawerModal: React.FC<IDrawerModalProps> = (props) => {
   const { uuid, children, rel } = props
   const [offsetTop, setOffetTop] = React.useState(0)
